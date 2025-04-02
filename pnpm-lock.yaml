@@ -23,6 +23,9 @@ importers:
       reka-ui:
         specifier: ^2.1.1
         version: 2.1.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2))
+      swiper:
+        specifier: ^11.2.6
+        version: 11.2.6
       tailwind-merge:
         specifier: ^3.0.2
         version: 3.0.2
@@ -32,6 +35,9 @@ importers:
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.8.2)
+      vue-router:
+        specifier: ^4.5.0
+        version: 4.5.0(vue@3.5.13(typescript@5.8.2))
     devDependencies:
       '@iconify-json/radix-icons':
         specifier: ^1.2.2
@@ -542,6 +548,9 @@ packages:
   '@vue/compiler-ssr@3.5.13':
     resolution: {integrity: sha512-wMH6vrYHxQl/IybKJagqbquvxpWCuVYpoUJfCqFZwa/JY1GdATAQ+TgVtgrwwMZ0D07QhA99rs/EAAWfvG6KpA==, tarball: https://registry.npmmirror.com/@vue/compiler-ssr/-/compiler-ssr-3.5.13.tgz}
 
+  '@vue/devtools-api@6.6.4':
+    resolution: {integrity: sha512-sGhTPMuXqZ1rVOk32RylztWkfXTRhuS7vgAKv0zjqk8gbsHkJ7xfFf+jbySxt7tWObEJwyKaHMikV/WGDiQm8g==, tarball: https://registry.npmmirror.com/@vue/devtools-api/-/devtools-api-6.6.4.tgz}
+
   '@vue/reactivity@3.5.13':
     resolution: {integrity: sha512-NaCwtw8o48B9I6L1zl2p41OHo/2Z4wqYGGIK1Khu5T7yxrn+ATOixn/Udn2m+6kZKB/J7cuT9DbWWhRxqixACg==, tarball: https://registry.npmmirror.com/@vue/reactivity/-/reactivity-3.5.13.tgz}
 
@@ -1022,6 +1031,10 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==, tarball: https://registry.npmmirror.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz}
     engines: {node: '>= 0.4'}
 
+  swiper@11.2.6:
+    resolution: {integrity: sha512-8aXpYKtjy3DjcbzZfz+/OX/GhcU5h+looA6PbAzHMZT6ESSycSp9nAjPCenczgJyslV+rUGse64LMGpWE3PX9Q==, tarball: https://registry.npmmirror.com/swiper/-/swiper-11.2.6.tgz}
+    engines: {node: '>= 4.7.0'}
+
   tailwind-merge@3.0.2:
     resolution: {integrity: sha512-l7z+OYZ7mu3DTqrL88RiKrKIqO3NcpEO8V/Od04bNpvk0kiIFndGEoqfuzvj4yuhRkHKjRkII2z+KS2HfPcSxw==, tarball: https://registry.npmmirror.com/tailwind-merge/-/tailwind-merge-3.0.2.tgz}
 
@@ -1119,6 +1132,11 @@ packages:
     peerDependenciesMeta:
       '@vue/composition-api':
         optional: true
+
+  vue-router@4.5.0:
+    resolution: {integrity: sha512-HDuk+PuH5monfNuY+ct49mNmkCRK4xJAV9Ts4z9UFc4rzdDnxQLyCMGGc8pKhZhHTVzfanpNwB/lwqevcBwI4w==, tarball: https://registry.npmmirror.com/vue-router/-/vue-router-4.5.0.tgz}
+    peerDependencies:
+      vue: ^3.2.0
 
   vue@3.5.13:
     resolution: {integrity: sha512-wmeiSMxkZCSc+PM2w2VRsOYAZC8GdipNFRTsLSfodVqI9mbejKeXEGr8SckuLnrQPGe3oJN5c3K0vpoU9q/wCQ==, tarball: https://registry.npmmirror.com/vue/-/vue-3.5.13.tgz}
@@ -1492,6 +1510,8 @@ snapshots:
     dependencies:
       '@vue/compiler-dom': 3.5.13
       '@vue/shared': 3.5.13
+
+  '@vue/devtools-api@6.6.4': {}
 
   '@vue/reactivity@3.5.13':
     dependencies:
@@ -1996,6 +2016,8 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
+  swiper@11.2.6: {}
+
   tailwind-merge@3.0.2: {}
 
   tailwindcss-animate@1.0.7(tailwindcss@3.4.17):
@@ -2071,6 +2093,11 @@ snapshots:
 
   vue-demi@0.14.10(vue@3.5.13(typescript@5.8.2)):
     dependencies:
+      vue: 3.5.13(typescript@5.8.2)
+
+  vue-router@4.5.0(vue@3.5.13(typescript@5.8.2)):
+    dependencies:
+      '@vue/devtools-api': 6.6.4
       vue: 3.5.13(typescript@5.8.2)
 
   vue@3.5.13(typescript@5.8.2):

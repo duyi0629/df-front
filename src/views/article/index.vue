@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import ArticleItem, { ArticleInfoProps } from "./c-cpn/article-item.vue";
 import ArticleSkeleton from "./c-cpn/article-skeleton.vue";
+import ArticleSwiper from "./c-cpn/article-swiper.vue";
 // 定义文章数据
 let data = ref<ArticleInfoProps[]>([]);
 
@@ -10,7 +11,7 @@ const showSkeleton = ref(true);
 
 const fetchData = async () => {
   try {
-    await new Promise((resolve, reject) => setTimeout(resolve, 3000));
+    await new Promise((resolve, reject) => setTimeout(resolve, 300));
     showSkeleton.value = false;
     data.value = [
       {
@@ -39,6 +40,7 @@ fetchData();
 </script>
 <template>
   <div v-if="!showSkeleton" class="mx-3 mt-3">
+    <ArticleSwiper class=" mb-4" />
     <div v-for="articleInfo in data" :key="articleInfo.id">
       <ArticleItem :articleInfo="articleInfo" />
     </div>

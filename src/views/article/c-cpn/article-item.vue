@@ -12,11 +12,15 @@ const { articleInfo } = defineProps<{
 </script>
 <template>
   <div class="bg-white mb-4 px-4 py-3 flex">
-    <div class="flex-1">
-      <p>
+    <img src="" class="h-[100px] w-[150px]" />
+    <div class="w-full flex flex-col ml-2">
+      <p class="h-[30px] w-full mb-2">
         {{ articleInfo.title }}
       </p>
-      <p>
+      <p class="h-[30px] w-full mb-2">
+        {{ articleInfo.content }}
+      </p>
+      <p class="h-[30px] w-full">
         {{ articleInfo.content }}
       </p>
     </div>
