@@ -7,7 +7,7 @@ import { RouterName } from "./routerEnum";
 const routes = [
   { path: "/", name: RouterName.Observatorium, component: Observatorium },
   { path: "/mind-pleat", name: RouterName.MindPleat, component: MindPleat },
-//   { path: "/article/:articleId", name: RouterName.Artilce, component: ArticleDetail },
+  { path: "/article/:articleId", name: RouterName.Artilce, component: ArticleDetail },
 ];
 
 const router = createRouter({

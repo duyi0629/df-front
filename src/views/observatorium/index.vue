@@ -26,7 +26,7 @@ setTimeout(() => {
             content: ""
         }
     ]
-}, 3000);
+}, 300);
 </script>
 <template>
   <div>

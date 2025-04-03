@@ -97,7 +97,8 @@ export default defineComponent({
           {
             ...attrs,
             ...props.routerLinkProps,
-            to: props.to
+            to: props.to,
+            class: 'text-black dark:text-white'
           },
           slots.default
         )
