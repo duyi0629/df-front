@@ -1,8 +1,13 @@
 <script setup lang="ts">
+import { useStores } from '@/store'
 import ArticleList from '@/components/list/index.vue'
 import { ref } from 'vue';
 import { Article } from '/@/interface/article';
 import HeaderSwiper from './header-swiper.vue';
+
+const {artilceList} = useStores()
+
+console.log(artilceList.data, 'artilceList')
 
 const fetching = ref(true)
 const articles = ref<Article[]>([])
