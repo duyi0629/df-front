@@ -1,11 +1,13 @@
 import { Pinia } from  'pinia'
-import { useArticleListStore } from './article'
+import { useArticleDetailStore, useArticleListStore } from './article'
 
 
 export const useStores = (pinia?: Pinia) => {
     const artilceList = useArticleListStore(pinia)
+    const artilceDetail = useArticleDetailStore(pinia)
     console.log(artilceList, 'artilceListartilceListartilceList')
     return {
-        artilceList
+        artilceList,
+        artilceDetail
     }
 }

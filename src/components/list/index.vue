@@ -2,9 +2,11 @@
 import ItemSkeleton from './item-skeleton.vue';
 import { Article } from '/@/interface/article';
 import listItem from './list-item.vue';
+import { Pagination } from '/@/interface/commom';
 
 interface ListPorps {
     articles: Article[],
+    pagination: Pagination | null
     fetching: Boolean
 }
 
@@ -26,9 +28,9 @@ const props = defineProps<ListPorps>()
         </template>
         <!-- list -->
         <template v-if="articles.length && !fetching ">
-            <template v-for="articleInfo in articles">
-                <listItem :articleInfo="articleInfo" />
-            </template>
+            <div v-for="(articleInfo, index) in articles"  :key="articleInfo._id" :id="articleInfo._id">
+                    <listItem :articleInfo="articleInfo" />
+            </div>
         </template>
   </div>
 </template>

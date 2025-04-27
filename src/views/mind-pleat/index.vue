@@ -3,7 +3,7 @@
 </script>
 <template>
   <div>
-    mind-pleat
+
   </div>
 </template>
 
