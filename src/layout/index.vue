@@ -3,6 +3,7 @@ import AppHeader from './app-header.vue'
 import AppNav from './app-nav/index.vue';
 import Background from './background.vue';
 import AppSidebar from './app-sidebar/index.vue'
+import ScrollToTop from '@/components/common/ScrollToTop.vue'
 </script>
 <template>
   <div>
@@ -17,6 +18,9 @@ import AppSidebar from './app-sidebar/index.vue'
         <AppSidebar />
       </main>
     </div>
+
+
+    <ScrollToTop />
   </div>
 </template>
 

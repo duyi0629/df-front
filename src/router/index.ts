@@ -2,12 +2,15 @@ import { RouteRecordRaw, createRouter, createWebHistory } from "vue-router";
 import ArticleDetail from "@/views/article/index.vue";
 import Observatorium from "@/views/observatorium/index.vue";
 import MindPleat from "@/views/mind-pleat/index.vue";
+import FairyLightCase from "@/views/fairy-light-case/index.vue";
 import Search from "@/views/search/index.vue";
 import { RouterName } from "./routerEnum";
 
 const routes: RouteRecordRaw[] = [
   { path: "/", name: RouterName.Observatorium, component: Observatorium },
   { path: "/mind-pleat", name: RouterName.MindPleat, component: MindPleat },
+  { path: "/fairy-light-case", name: RouterName.FairyLightCase, component: FairyLightCase },
+  
   {
     path: "/search/:keyword",
     name: RouterName.Search,

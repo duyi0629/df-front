@@ -21,5 +21,12 @@ export const menus: Array<MenuItem> = [
         router: '/mind-pleat',
         icon: '',
 
+    },
+    {
+        id: RouterName.FairyLightCase,
+        name: '萤光匣',
+        router: '/fairy-light-case',
+        icon: '',
+
     }
 ]

@@ -8,12 +8,13 @@ const ARTICLE_API_PATH = "/article";
 
 export const useArticleListStore = defineStore("article", () => {
   const fetching = ref(false);
-  const data = ref<Article[]>([]); // 使用 ref 替代 shallowRef
+  const data = ref<Article[]>([]); 
   const pagination = shallowRef<Pagination | null>(null);
 
   const fetch = async (params: $TODO = {}) => {
     const isFirstPage = !params.pageNum || params.pageNum === 1;
     const isLoadMore = !isFirstPage && params.pageNum! > 1;
+
 
     if (isFirstPage) {
       data.value = [];
@@ -24,8 +25,9 @@ export const useArticleListStore = defineStore("article", () => {
     try {
       const res = await DFRequest.get({ url: `${ARTICLE_API_PATH}/list`, params });
       if (res.code === 200) {
+        console.log(data.value, 'sssss')
         if (isLoadMore) {
-          data.value.push(...res.data); // 自动触发响应式更新
+          data.value.push(...res.data); 
         } else {
           data.value = res.data;
         }
